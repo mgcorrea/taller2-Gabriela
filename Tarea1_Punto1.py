@@ -22,7 +22,7 @@ d = pd.read_excel(io=file_name, sheet_name="Distancias", index_col=[0, 1]).squee
 f = pd.read_excel(io=file_name, sheet_name="Flujos", index_col=[0, 1]).squeeze()
 
 # Modelo de optimizacion
-m = Model("Distancias-Tiempos")
+m = Model("Distanciamiento")
 
 # Variables
 x = m.addVars(P, E, vtype=GRB.BINARY, name="x")
