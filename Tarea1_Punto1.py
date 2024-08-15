@@ -35,7 +35,7 @@ for p in P:
 
 # 2) Cada proceso esté asignado a una estación
 for e in E:
-    m.addConstr(quicksum(x[p, e] for p in P) == 6)
+    m.addConstr(quicksum(x[p, e] for p in P) == 10)
 
 
 
