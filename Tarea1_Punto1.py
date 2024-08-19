@@ -33,12 +33,6 @@ y = m.addVars(P, E, E,P, vtype=GRB.BINARY, name="y")
 for p in P:
     m.addConstr(quicksum(x[p, e] for e in E) == 2)
 
-# 2) Cada proceso esté asignado a una estación
-for e in E:
-    m.addConstr(quicksum(x[p, e] for p in P) == 43)
-
-
-
 # Restricciones para linealizar la función 
 for i in P:
     for j in E:
